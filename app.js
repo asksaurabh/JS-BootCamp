@@ -28,3 +28,11 @@ if (currentUserId) {
 } else {
   console.log("No user is logged in.");
 }
+
+// Ternary Operator
+let userStatus = "offline";
+let color;
+
+console.log(color);
+color = userStatus === "offline" ? "red" : "green";
+console.log(color);
