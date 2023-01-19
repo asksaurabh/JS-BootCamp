@@ -17,3 +17,14 @@ if (userRating < 3) {
 } else {
   console.log("You like us so much.");
 }
+
+// Use the concept of truthy/falsy values inside conditionals
+
+let currentUserId = null;
+// currentUserId = 12;
+
+if (currentUserId) {
+  console.log("User is logged in.");
+} else {
+  console.log("No user is logged in.");
+}
