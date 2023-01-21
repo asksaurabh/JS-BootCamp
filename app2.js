@@ -1,3 +1,4 @@
+"use strict";
 // Object creation, accessing properties
 
 const fitBitData = {
@@ -107,3 +108,90 @@ console.log([] === [], {} === {});
 
 const copy = nums;
 console.log(copy === nums);
+
+// For loops
+for (let i = 3; i >= 0; i--) {
+  console.log(`Hello : ${i}`);
+}
+
+// Nested loops:
+let grid = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9],
+];
+
+for (let i = 0; i < grid.length; i++) {
+  for (let j = 0; j < grid[i].length; j++) {
+    console.log(grid[i][j]);
+  }
+}
+
+// While loops
+const target = Math.floor(Math.random() * 10);
+let guess = Math.floor(Math.random() * 10);
+
+while (guess !== target) {
+  console.log(`Target: ${target}, Guess: ${guess}`);
+  guess = Math.floor(Math.random() * 10);
+}
+console.log(`Target: ${target}, Guess: ${guess}`);
+
+// for..of loop
+
+const scoreList = [1, 2, 3, 4, 5];
+
+for (let score of scoreList) {
+  console.log(score);
+}
+
+for (let char of "hello") {
+  console.log(char.toUpperCase());
+}
+
+grid = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9],
+];
+
+let sum = 0;
+
+for (let row of grid) {
+  for (let num of row) {
+    sum += num;
+  }
+}
+
+console.log(sum);
+
+// Iterate over object keys and values
+// Object is not an iterable but there collection of keys and values are
+
+const movieReviews = {
+  "mi - 1": 8,
+  "mi - 2": 9,
+  "mi - 3": 8,
+  "mi - 4": 2,
+  "mi - 5": 10,
+};
+
+for (let movie of Object.keys(movieReviews)) {
+  console.log(`MovieName: ${movie} : ${movieReviews[movie]}`);
+}
+
+for (let rating of Object.values(movieReviews)) {
+  console.log(rating);
+}
+
+// for..in loop
+// Used to loop over keys in an object
+
+for (let movie in movieReviews) {
+  console.log(`MovieName: ${movie} : ${movieReviews[movie]}`);
+}
+
+// for..in over other iterables such as arrays.
+for (let index in [12, 13, 14, 15]) {
+  console.log(index);
+}
