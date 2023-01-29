@@ -76,9 +76,23 @@
 // });
 
 // With async and await.
+// async function getPlanets() {
+//   const res = await axios.get("https://swapi.dev/api/planets/");
+//   console.log(res);
+// }
+
+// getPlanets();
+
+// Part - 4
+// try - catch block
+
 async function getPlanets() {
-  const res = await axios.get("https://swapi.dev/api/planets/");
-  console.log(res);
+  try {
+    const res = await axios.get("https://swapi.dev/api/planets/");
+    console.log(res.data);
+  } catch (e) {
+    console.log(e);
+  }
 }
 
 getPlanets();
